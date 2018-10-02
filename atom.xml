@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ccttry.github.io/"/>
-  <updated>2018-10-02T09:24:48.394Z</updated>
+  <updated>2018-10-02T13:21:12.031Z</updated>
   <id>https://ccttry.github.io/</id>
   
   <author>
@@ -17,22 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>firstpage</title>
+    <title></title>
     <link href="https://ccttry.github.io/2018/10/02/firstpage/"/>
     <id>https://ccttry.github.io/2018/10/02/firstpage/</id>
-    <published>2018-10-02T09:24:27.000Z</published>
-    <updated>2018-10-02T09:24:48.394Z</updated>
+    <published>2018-10-02T09:24:27.475Z</published>
+    <updated>2018-10-02T13:21:12.031Z</updated>
     
-    <content type="html"><![CDATA[<p>###自动索引<br> [TOC]</p><p>###特征标签<br> @(示例)[马克飞象|帮助|Markdown]</p><p>###粗体<br> <strong>马克飞象</strong></p><p>###突出<br><code>Ctrl + /</code> </p><p>###列表</p><ul><li>第一项</li><li>第二项</li></ul><p>###引用</p><blockquote><p>三人行必有吾师。    —— <a href="http://baike.baidu.com/" target="_blank" rel="noopener">孔子</a></p></blockquote><p><a href="http://www.example.com" target="_blank" rel="noopener">链接名</a>或一个脚注[^demo]。</p><p>###代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> emp = &#123;<span class="attr">name</span>:<span class="string">"Frank"</span>, <span class="attr">age</span>:<span class="number">45</span> &#125;;</span><br></pre></td></tr></table></figure></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">代码内容</span><br><span class="line">``` </span><br><span class="line">```Java</span><br><span class="line">代码内容</span><br></pre></td></tr></table></figure><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table><thead><tr><th style="text-align:left">Item</th><th style="text-align:right">价格</th><th style="text-align:center">数量  </th></tr></thead><tbody><tr><td style="text-align:left">Computer</td><td style="text-align:right">5600</td><td style="text-align:center">5   </td></tr><tr><td style="text-align:left">Phone</td><td style="text-align:right">120</td><td style="text-align:center">12  </td></tr><tr><td style="text-align:left">Pipe</td><td style="text-align:right">10</td><td style="text-align:center">234  </td></tr></tbody></table><p>###流程图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">op1=&gt;operation: 准备数据</span><br><span class="line">op2=&gt;operation: 计算处理</span><br><span class="line">cond1=&gt;condition: 是否正确?</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;op2-&gt;cond1</span><br><span class="line">cond1(yes)-&gt;e</span><br><span class="line">cond1(no)-&gt;op1</span><br></pre></td></tr></table></figure></p><p>###以及时序图:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">客户端-&gt;服务端: 给我姓名叫张三的员工信息</span><br><span class="line">Note right of 服务端: 服务端响应</span><br><span class="line">服务端--&gt;客户端: 给你张三的信息</span><br></pre></td></tr></table></figure><h3 id="LaTeX-公式"><a href="#LaTeX-公式" class="headerlink" title="LaTeX 公式"></a>LaTeX 公式</h3><p>可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：</p><p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="今夜南京微凉"><a href="#今夜南京微凉" class="headerlink" title="今夜南京微凉"></a>今夜南京微凉</h1><h2 id="记开博第一篇"><a href="#记开博第一篇" class="headerlink" title="记开博第一篇"></a>记开博第一篇<br></h2><p>&#160; &#160; 中秋过后的南京，天一开始转凉。早起穿着一件短袖就显得单薄，晚自习回去的时候，冻得瑟瑟发抖…秋风一吹起来，人总是会容易感伤。“古道西风瘦马断肠人在天涯”。想念高中的老师们，温文尔雅；更想念高中的同学们，怀念那些年在一起奋斗的日子；怀念当时我们晚自习下课后，一起去锻炼的热情；怀念娥姐一直孜孜不倦告诫我们的那句话：“他他他他他，…风云人物~…”可是回忆回不去，再美好也回不去了。最近赶上保研报名的时间了，朋友圈和空间里晒满了同学们的录取通知，大家都很厉害，大多都有了一个好的去处。</p><h4 id="只愿天涯再相遇，你我仍相识"><a href="#只愿天涯再相遇，你我仍相识" class="headerlink" title="只愿天涯再相遇，你我仍相识"></a>只愿天涯再相遇，你我仍相识</h4><p>&#160; &#160;我一直害怕自己堕落了，消极生活，将来和你们在一起相聚之时，跟不上你们的话题，那将是多么的可悲。现在已经是大四了，这些日子以来，生活已经步入了新的一个阶段，<br>&#160; &#160;我发现自己有好多事情想做，好多事情要做，好多事情还没有做。好多事情，怕是自己一口气也做不了，索性就一件一件事情来，第一件就是从写博客开始，记录下自己的所学所感。</p><h4 id="Dream-are-hard-to-follow-but-don’t-let-anyone-tear-them-away"><a href="#Dream-are-hard-to-follow-but-don’t-let-anyone-tear-them-away" class="headerlink" title="Dream are hard  to follow ,but don’t let anyone tear them away."></a>Dream are hard  to follow ,but don’t let anyone tear them away.</h4>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;###自动索引&lt;br&gt; [TOC]&lt;/p&gt;
-&lt;p&gt;###特征标签&lt;br&gt; @(示例)[马克飞象|帮助|Markdown]&lt;/p&gt;
-&lt;p&gt;###粗体&lt;br&gt; &lt;strong&gt;马克飞象&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;###突出&lt;br&gt;&lt;code&gt;Ctrl + /&lt;/code&gt;
+        &lt;h1 id=&quot;今夜南京微凉&quot;&gt;&lt;a href=&quot;#今夜南京微凉&quot; class=&quot;headerlink&quot; title=&quot;今夜南京微凉&quot;&gt;&lt;/a&gt;今夜南京微凉&lt;/h1&gt;&lt;h2 id=&quot;记开博第一篇&quot;&gt;&lt;a href=&quot;#记开博第一篇&quot; class=&quot;headerlink&quot; titl
       
     
     </summary>
