@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CTry</title>
+  
+  <subtitle>没有比脚更长的路，走过去，前面是个天！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ccttry.github.io/"/>
+  <updated>2018-10-02T08:55:12.899Z</updated>
+  <id>https://ccttry.github.io/</id>
+  
+  <author>
+    <name>Mr CTry</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello ， I&#39;m CTry</title>
+    <link href="https://ccttry.github.io/2018/10/01/hello-world/"/>
+    <id>https://ccttry.github.io/2018/10/01/hello-world/</id>
+    <published>2018-10-01T13:36:22.204Z</published>
+    <updated>2018-10-02T08:55:12.899Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my PersonalPage! This is my very first post. ask me for more information about this blog. If you get any problems when scanning my blogs, you can call me at 182XXXX directly.</p><h2 id="Hello-boys-and-girls"><a href="#Hello-boys-and-girls" class="headerlink" title="Hello boys and girls"></a>Hello boys and girls</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to my PersonalPage! This is my very first post. ask me for more information about this blog. If you get any problems when scannin
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
