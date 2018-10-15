@@ -7,19 +7,19 @@
   
   <title>Linux系统启动过程 | CTry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
+  <meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比 )  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux系统启动过程">
 <meta property="og:url" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/index.html">
 <meta property="og:site_name" content="CTry">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比 )  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/img1.jpg">
-<meta property="og:updated_time" content="2018-10-15T04:28:05.484Z">
+<meta property="og:updated_time" content="2018-10-15T04:55:47.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux系统启动过程">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比 )  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta name="twitter:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/img1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="CTry" type="application/atom+xml">
@@ -82,7 +82,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术类/">技术类</a>
+    <a class="article-category-link" href="/categories/Linux系统/">Linux系统</a>
   </div>
 
   </div>
@@ -101,7 +101,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&ensp;&ensp;&ensp;&ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）</p>
+        <p>&ensp;&ensp;&ensp;&ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见<a href="https://blog.csdn.net/qq_27754983/article/details/75212666" target="_blank" rel="noopener">CentOS 6 和 CentOS 7 系统启动对比</a> )</p>
 <ol>
 <li>内核引导</li>
 <li>运行init</li>
@@ -196,8 +196,8 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
 运行级别4：系统未使用，保留
 运行级别5：X11控制台，登陆后进入图形GUI模式
 运行级别6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启
-</code></pre><p>这些级别中1、2、4运行级别很少用，相对而言0、3、5、6运行级别用的会较多。3和5运行级别除了桌面相关的进程外没有什么区别。为了减少资源占用，推荐都用3级别。<br>建立终端</p>
-<p>rc执行完毕后，返回init。这时基本系统环境已经设置好了，各种守护进程也已经启动了。init接下来会打开6个终端，以便用户登录系统。通过按Alt+Fn(n对应1-6)可以在这6个终端中切换。在inittab中的以下6行就是定义了6个终端：</p>
+</code></pre><p>&ensp;&ensp;&ensp;&ensp;这些级别中1、2、4运行级别很少用，相对而言0、3、5、6运行级别用的会较多。3和5运行级别除了桌面相关的进程外没有什么区别。为了减少资源占用，推荐都用3级别。</p>
+<h2 id="建立终端"><a href="#建立终端" class="headerlink" title="建立终端"></a>建立终端</h2><p>&ensp;&ensp;&ensp;&ensp;rc执行完毕后，返回init。这时基本系统环境已经设置好了，各种守护进程也已经启动了。init接下来会打开6个终端，以便用户登录系统。通过按Alt+Fn(n对应1-6)可以在这6个终端中切换。在inittab中的以下6行就是定义了6个终端：</p>
 <pre><code># Run gettys in standard runlevels
 1:2345:respawn:/sbin/mingetty tty1
 2:2345:respawn:/sbin/mingetty tty2
@@ -205,23 +205,21 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
 4:2345:respawn:/sbin/mingetty tty4
 5:2345:respawn:/sbin/mingetty tty5
 6:2345:respawn:/sbin/mingetty tty6
-</code></pre><p>&ensp;&ensp;&ensp;从上面可以看出在2、3、4、5的运行级别中都将以respawn方式运行mingetty程序，mingetty程序能打开终端、设置模式。同时它会显示一个文本登录界面，这个界面就是我们经常看到的登录界面，在这个登录界面中会提示用户输入用户名，而用户输入的用户将作为参数传给login程序来验证用户的身份。<br>用户登录系统</p>
-<p>一般来说，用户的登录方式有三种：</p>
+</code></pre><p>&ensp;&ensp;&ensp;从上面可以看出在2、3、4、5的运行级别中都将以respawn方式运行mingetty程序，mingetty程序能打开终端、设置模式。同时它会显示一个文本登录界面，这个界面就是我们经常看到的登录界面，在这个登录界面中会提示用户输入用户名，而用户输入的用户将作为参数传给login程序来验证用户的身份。</p>
+<h2 id="用户登录系统"><a href="#用户登录系统" class="headerlink" title="用户登录系统"></a>用户登录系统</h2><p>一般来说，用户的登录方式有三种：</p>
 <pre><code>（1）命令行登录
 （2）ssh登录
 （3）图形界面登录
 </code></pre><p>&ensp;&ensp;&ensp;&ensp;对于运行级别为5的图形方式用户来说，他们的登录是通过一个图形化的登录界面。登录成功后可以直接进入 KDE、Gnome 等窗口管理器。而本文主要讲的还是文本方式登录的情况：当我们看到mingetty的登录界面时，我们就可以输入用户名和密码来登录系统了。<br>&ensp;&ensp;&ensp;&ensp;Linux 的账号验证程序是 login，login 会接收 mingetty 传来的用户名作为用户名参数。然后 login 会对用户名进行分析：如果用户名不是 root，且存在 /etc/nologin 文件，login 将输出 nologin 文件的内容，然后退出。这通常用来系统维护时防止非root用户登录。只有/etc/securetty中登记了的终端才允许 root 用户登录，如果不存在这个文件，则 root 用户可以在任何终端上登录。/etc/usertty文件用于对用户作出附加访问限制，如果不存在这个文件，则没有其他限制。</p>
 <h2 id="参考、推荐"><a href="#参考、推荐" class="headerlink" title="参考、推荐"></a>参考、推荐</h2><p>参考文章：</p>
-<blockquote>
-<p><a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/" target="_blank" rel="noopener">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a><br>   <br>6 Stages of Linux Boot Process (Startup Sequence)<br><a href="http://www.runoob.com/linux/linux-system-boot.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-system-boot.html</a>  Linux <br>系统启动过程<br><a href="https://blog.csdn.net/pengrui18/article/details/49757451" target="_blank" rel="noopener">https://blog.csdn.net/pengrui18/article/details/49757451</a> <br>linux中inittab文件详解</p>
-</blockquote>
+<p>[1]:[6 Stages of Linux Boot Process (Startup Sequence)]<a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/" target="_blank" rel="noopener">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a><br>[2]:[Linux 系统启动过程]<a href="http://www.runoob.com/linux/linux-system-boot.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-system-boot.html</a><br>[3]:[linux中inittab文件详解]<a href="https://blog.csdn.net/pengrui18/article/details/49757451" target="_blank" rel="noopener">https://blog.csdn.net/pengrui18/article/details/49757451</a> <br></p>
 <p>推荐：</p>
 <p>&ensp;&ensp;&ensp;&ensp;Linux系统启动这个看似很小的部分里面包含了非常多的内容，本文也只是我在学习Linux系统时，查资料总结的笔记，只是介绍了很少的一部分内容，推荐大家去深入了解，比如守护进程的创建、fork函数的应用、Linux VFS文件系统机制等等。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9stf2o000084cq9ew8sxvu" class="article-share-link">Share</a>
+      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9tsv7b000060cq5z4auj8e" class="article-share-link">Share</a>
       
         <a href="https://ccttry.github.io/2018/10/15/Linux系统启动过程/#disqus_thread" class="article-comment-link">留言</a>
         
@@ -276,7 +274,7 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu系统/">Ubuntu系统</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术类/">技术类</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux系统/">Linux系统</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu系统/">Ubuntu系统</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
