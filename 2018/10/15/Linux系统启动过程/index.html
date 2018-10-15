@@ -7,18 +7,20 @@
   
   <title>Linux系统启动过程 | CTry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统  内核引导当计算打开电源按钮之后，">
+  <meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux系统启动过程">
 <meta property="og:url" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/index.html">
 <meta property="og:site_name" content="CTry">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统  内核引导当计算打开电源按钮之后，">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-15T04:14:30.037Z">
+<meta property="og:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/img1.jpg">
+<meta property="og:updated_time" content="2018-10-15T04:28:05.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux系统启动过程">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统  内核引导当计算打开电源按钮之后，">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比）  内核引导 运行init 系统初始化 建立终端 用户登录系统">
+<meta name="twitter:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/img1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="CTry" type="application/atom+xml">
   
@@ -105,9 +107,11 @@
 <li>运行init</li>
 <li>系统初始化</li>
 <li>建立终端</li>
-<li>用户登录系统</li>
+<li>用户登录系统<a id="more"></a>
+<h2 id="内核引导"><a href="#内核引导" class="headerlink" title="内核引导"></a>内核引导</h2></li>
 </ol>
-<h2 id="内核引导"><a href="#内核引导" class="headerlink" title="内核引导"></a>内核引导</h2><p>当计算打开电源按钮之后，</p>
+<p><img src="/2018/10/15/Linux系统启动过程/img1.jpg" alt=""></p>
+<p>当计算打开电源按钮之后，</p>
 <ul>
 <li>第一步：BIOS开机自检（POST Power On Self Test ）。</li>
 <li>第二步：BIOS在完成硬件检测和资源分配后，将硬盘中的引导程序读到系统内存中然后将控制权交给引导程序。</li>
@@ -217,7 +221,7 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9sbwk70001vwcqlpfz78gw" class="article-share-link">Share</a>
+      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9stf2o000084cq9ew8sxvu" class="article-share-link">Share</a>
       
         <a href="https://ccttry.github.io/2018/10/15/Linux系统启动过程/#disqus_thread" class="article-comment-link">留言</a>
         
