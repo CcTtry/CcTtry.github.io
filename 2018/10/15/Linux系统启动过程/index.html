@@ -16,7 +16,9 @@
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比 )  内核引导 运行init 系统初始化 建立终端 用户登录系统">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/img1.jpg">
-<meta property="og:updated_time" content="2018-10-15T04:55:47.352Z">
+<meta property="og:image" content="https://ccttry.github.io/2018/10/15/Linux系统启动过程/imag2.jpg">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2014/06/bg2013081706.png">
+<meta property="og:updated_time" content="2018-10-15T07:34:17.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux系统启动过程">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Linux系统的启动过程大概可以分成以以下五个阶段：（本文章以CentOS 7之前的版本为例讲解，CentOS 7开始之后的版本使用systemd来代替centos6以前的init程序，详细区别可见CentOS 6 和 CentOS 7 系统启动对比 )  内核引导 运行init 系统初始化 建立终端 用户登录系统">
@@ -169,7 +171,8 @@ pr:12345:powerokwait:/sbin/shutdown -c &quot;Power Restored; Shutdown Cancelled&
 ###在5级别上运行xdm程序，提供xdm图形方式登录界面，并在退出时重新执行(respawn)
 # Run xdm in runlevel 5
 x:5:respawn:/etc/X11/prefdm -nodaemon
-</code></pre><h2 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h2><p>&ensp;&ensp;&ensp;&ensp;其中，第一个被执行的脚本为/etc/rc.d/rc.sysinit，这个是真正的OS初始化脚本，简单讲下这个脚本的任务：</p>
+</code></pre><h2 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h2><p><img src="/2018/10/15/Linux系统启动过程/imag2.jpg" alt=""></p>
+<p>&ensp;&ensp;&ensp;&ensp;其中，第一个被执行的脚本为/etc/rc.d/rc.sysinit，这个是真正的OS初始化脚本，简单讲下这个脚本的任务：</p>
 <ol>
 <li>激活udev和selinux；</li>
 <li>根据/etc/sysctl.conf文件，来设定内核参数；</li>
@@ -210,7 +213,8 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
 <pre><code>（1）命令行登录
 （2）ssh登录
 （3）图形界面登录
-</code></pre><p>&ensp;&ensp;&ensp;&ensp;对于运行级别为5的图形方式用户来说，他们的登录是通过一个图形化的登录界面。登录成功后可以直接进入 KDE、Gnome 等窗口管理器。而本文主要讲的还是文本方式登录的情况：当我们看到mingetty的登录界面时，我们就可以输入用户名和密码来登录系统了。<br>&ensp;&ensp;&ensp;&ensp;Linux 的账号验证程序是 login，login 会接收 mingetty 传来的用户名作为用户名参数。然后 login 会对用户名进行分析：如果用户名不是 root，且存在 /etc/nologin 文件，login 将输出 nologin 文件的内容，然后退出。这通常用来系统维护时防止非root用户登录。只有/etc/securetty中登记了的终端才允许 root 用户登录，如果不存在这个文件，则 root 用户可以在任何终端上登录。/etc/usertty文件用于对用户作出附加访问限制，如果不存在这个文件，则没有其他限制。</p>
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2014/06/bg2013081706.png" alt=""></p>
+<p>&ensp;&ensp;&ensp;&ensp;对于运行级别为5的图形方式用户来说，他们的登录是通过一个图形化的登录界面。登录成功后可以直接进入 KDE、Gnome 等窗口管理器。而本文主要讲的还是文本方式登录的情况：当我们看到mingetty的登录界面时，我们就可以输入用户名和密码来登录系统了。<br>&ensp;&ensp;&ensp;&ensp;Linux 的账号验证程序是 login，login 会接收 mingetty 传来的用户名作为用户名参数。然后 login 会对用户名进行分析：如果用户名不是 root，且存在 /etc/nologin 文件，login 将输出 nologin 文件的内容，然后退出。这通常用来系统维护时防止非root用户登录。只有/etc/securetty中登记了的终端才允许 root 用户登录，如果不存在这个文件，则 root 用户可以在任何终端上登录。/etc/usertty文件用于对用户作出附加访问限制，如果不存在这个文件，则没有其他限制。</p>
 <h2 id="参考、推荐"><a href="#参考、推荐" class="headerlink" title="参考、推荐"></a>参考、推荐</h2><p>参考文章：</p>
 <p>[1]:[6 Stages of Linux Boot Process (Startup Sequence)]<a href="https://www.thegeekstuff.com/2011/02/linux-boot-process/" target="_blank" rel="noopener">https://www.thegeekstuff.com/2011/02/linux-boot-process/</a><br>[2]:[Linux 系统启动过程]<a href="http://www.runoob.com/linux/linux-system-boot.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-system-boot.html</a><br>[3]:[linux中inittab文件详解]<a href="https://blog.csdn.net/pengrui18/article/details/49757451" target="_blank" rel="noopener">https://blog.csdn.net/pengrui18/article/details/49757451</a> <br></p>
 <p>推荐：</p>
@@ -219,7 +223,7 @@ x:5:respawn:/etc/X11/prefdm -nodaemon
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9u0zwl0000iocq1k6e1vfq" class="article-share-link">Share</a>
+      <a data-url="https://ccttry.github.io/2018/10/15/Linux系统启动过程/" data-id="cjn9zijk80000g0cqrtc4vnee" class="article-share-link">Share</a>
         
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
